@@ -1,15 +1,20 @@
 import streamlit as st
 
-# Set page config
 st.set_page_config(page_title="My Link List", layout="centered")
 
-# Custom CSS for styling and background
+# Proper background styling using Streamlit classes
 st.markdown("""
     <style>
-        body {
-             background-color: #000000;
+        /* Main background */
+        .stApp {
+            background-color: #000000;
             color: #ffffff;
             font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Remove padding around the content */
+        .main > div {
+            padding: 2rem 1rem;
         }
 
         .title {
@@ -31,9 +36,9 @@ st.markdown("""
             width: 60%;
             margin: 10px auto;
             padding: 15px;
-            background-color: #ffffff10;
+            background-color: #1f1f1f;
             color: #ffffff;
-            border: 1px solid #ffffff40;
+            border: 1px solid #444;
             border-radius: 10px;
             text-align: center;
             font-size: 1.1em;
@@ -42,7 +47,7 @@ st.markdown("""
         }
 
         .link-button:hover {
-            background-color: #ffffff30;
+            background-color: #333333;
             transform: scale(1.03);
         }
 
@@ -52,7 +57,7 @@ st.markdown("""
         }
 
         .contact a {
-            color: #fff;
+            color: #ffffff;
             font-weight: bold;
             text-decoration: none !important;
         }
@@ -66,7 +71,6 @@ st.markdown("""
 # Title and subtitle
 st.markdown("<div class='title'>🔗 My Link List</div>", unsafe_allow_html=True)
 st.markdown("<div class='subtitle'>Your favorite places in one place ✨</div>", unsafe_allow_html=True)
-
 # Updated links including Facebook and Instagram
 link_data = {
     "🌐 GitHub": "https://github.com/Govardhan8378/",
@@ -78,7 +82,7 @@ link_data = {
     "📸 Instagram": "https://www.instagram.com/govardhanreddy8378/"
 }
 
-# Display each link as a styled button
+# Display links
 for name, url in link_data.items():
     st.markdown(f"<a class='link-button' href='{url}' target='_blank'>{name}</a>", unsafe_allow_html=True)
 
@@ -86,6 +90,6 @@ for name, url in link_data.items():
 st.markdown("""
     <div class='contact'>
         <h4>📬 Contact Me</h4>
-        <p>Want to collaborate? <a href='govardhanreddy4988@gmail.com'>Send an Email</a></p>
+        <p>Want to collaborate? <a href='mailto:youremail@example.com'>Send an Email</a></p>
     </div>
 """, unsafe_allow_html=True)
