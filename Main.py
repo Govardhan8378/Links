@@ -7,8 +7,8 @@ st.set_page_config(page_title="My Link List", layout="centered")
 st.markdown("""
     <style>
         body {
-            background-image: linear-gradient(to right, #83a4d4, #b6fbff);
-            color: #fff;
+             background-color: #000000;
+            color: #ffffff;
             font-family: 'Segoe UI', sans-serif;
         }
 
