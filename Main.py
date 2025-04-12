@@ -90,6 +90,6 @@ for name, url in link_data.items():
 st.markdown("""
     <div class='contact'>
         <h4>📬 Contact Me</h4>
-        <p>Want to collaborate? <a href='mailto:youremail@example.com'>Send an Email</a></p>
+        <p>Want to collaborate? <a href='mailto: govardhanreddy4988@gmail.com'>Send an Email</a></p>
     </div>
 """, unsafe_allow_html=True)
